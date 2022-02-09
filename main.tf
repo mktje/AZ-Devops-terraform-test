@@ -46,6 +46,7 @@ resource "azurerm_container_group" "CG-terraform-test" {
     }
 }
 
+
 #terraform commands
 #init
 #plan
