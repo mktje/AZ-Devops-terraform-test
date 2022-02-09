@@ -48,6 +48,7 @@ msbuild.wrn
 # .tfstate files
 *.tfstate
 *.tfstate.*
+.terraform.lock.*
 
 # plan files
 planout
