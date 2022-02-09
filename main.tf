@@ -20,7 +20,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_container_group" "CG-terraform-test" {
-  name                = "CG-weather-api"
+  name                = "weatherapp"
   location            = "westeurope"
   resource_group_name = "RG-terraform-test"
 
