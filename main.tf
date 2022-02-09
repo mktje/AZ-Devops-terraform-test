@@ -29,8 +29,8 @@ resource "azurerm_container_group" "CG-terraform-test" {
   os_type         = "Linux"
 
   container {
-    name   = "weatherapi"
-    image  = "mktje/weatherapi"
+    name   = "weatherapp"
+    image  = "mktje/weatherapp"
     cpu    = "1"
     memory = "1"
 
