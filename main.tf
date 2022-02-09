@@ -21,8 +21,8 @@ provider "azurerm" {
 
 resource "azurerm_container_group" "CG-terraform-test" {
   name                = "CG-weather-api"
-  location            = azurerm_resource_group.RG-terraform-test.location
-  resource_group_name = azurerm_resource_group.RG-terraform-test.name
+  location            = "westeurope"
+  resource_group_name = "RG-terraform-test"
 
   ip_address_type = "public"
   dns_name_label  = "mktestweatherapi"
