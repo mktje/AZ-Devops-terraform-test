@@ -5,6 +5,13 @@ terraform {
       version = "2.95.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name = "RG-terraform-test"
+    storage_account_name = "samkterraformtest"
+    container_name = "tfstate"
+    key = "terraform.tfstate"
+    
+  }
 }
 
 provider "azurerm" {
