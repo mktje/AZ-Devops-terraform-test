@@ -19,6 +19,12 @@ provider "azurerm" {
   }
 }
 
+variable "imagebuild" {
+  type        = string
+  description = "Latest Image Build"
+}
+
+
 resource "azurerm_container_group" "CG-terraform-test" {
   name                = "weatherapp"
   location            = "westeurope"
@@ -30,7 +36,7 @@ resource "azurerm_container_group" "CG-terraform-test" {
 
   container {
     name   = "weatherapp"
-    image  = "mktje/weatherapp"
+    image  = "mktje/weatherapp:${var.imagebuild}"
     cpu    = "1"
     memory = "1"
 
